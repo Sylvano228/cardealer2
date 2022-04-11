@@ -1,7 +1,5 @@
-from xml.dom.minidom import Document
-from xml.etree.ElementInclude import include
+
 from django.conf.urls.static import static
-from django.conf import settings
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
@@ -13,4 +11,9 @@ urlpatterns = [
     path('cars/', include('cars.urls')),
     path('accounts/', include('accounts.urls')),
     path('socialaccounts/', include('allauth.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('contacts/', include('contacts.urls')),
+] + static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)
+
+
+ #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
