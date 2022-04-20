@@ -20,10 +20,12 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title text-center">
-            <h1>Contact <span>Us</span></h1>
+            <h1>Contactez <span>Nous</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            {% include 'includes/messages.html' %}
         </div>
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="row">
                 <div class="col-lg-7">
                     <div class="row">
@@ -54,7 +56,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="send-btn text-center">
-                                <button type="submit" class="btn btn-md button-theme">Send Message</button>
+                                <button type="submit" class="btn btn-md button-theme">Envoyer le message</button>
                             </div>
                         </div>
                     </div>
@@ -66,8 +68,8 @@
                                 <i class="flaticon-phone"></i>
                             </div>
                             <div class="detail">
-                                <h5>Phone:</h5>
-                                <p><a href="#">+228 93571279</a></p>
+                                <h5>Téléphone:</h5>
+                                <p><a href="tel:+22893571279">+228 93571279</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -75,8 +77,8 @@
                                 <i class="flaticon-mail"></i>
                             </div>
                             <div class="detail">
-                                <h5>Email:</h5>
-                                <p><a href="#">info@themevessel.com</a></p>
+                                <h5>Adresse Email:</h5>
+                                <p><a href="mailto:info@businessclef.fr?subject=Contact%20depuis%20http://cardealer.fr">info@businessclef.fr</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -84,8 +86,8 @@
                                 <i class="flaticon-earth"></i>
                             </div>
                             <div class="detail">
-                                <h5>Web:</h5>
-                                <p><a href="#">info@themevessel.com</a></p>
+                                <h5>Site Web:</h5>
+                                <p><a href="#">businessclef.fr</a></p>
                             </div>
                         </div>
                         <div class="ci-box mb-0">
@@ -94,7 +96,7 @@
                             </div>
                             <div class="detail">
                                 <h5>Fax:</h5>
-                                <p><a href="#">+0477 85X6 552</a></p>
+                                <p><a href="tel:+22893571279">+22893571279</a></p>
                             </div>
                         </div>
                     </div>

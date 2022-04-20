@@ -8,10 +8,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Search Results</h1>
+            <h1>Résultats de recherche</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home'%}">Home</a></li>
-                <li class="active">Search</li>
+                <li><a href="{% url 'home'%}">Accueil</a></li>
+                <li class="active">Recherche</li>
             </ul>
         </div>
     </div>
@@ -28,7 +28,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="model">
-                                    <option disabled="disabled" selected="selected">Select Model</option>
+                                    <option disabled="disabled" selected="selected">Sélectionnez le modèle</option>
                                     {% for model in model_search%}
                                     <option value="{{ model}}">{{ model}}</option>
                                     {% endfor%}
@@ -38,7 +38,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="city">
-                                    <option selected="true" disabled="disabled">Location</option>
+                                    <option selected="true" disabled="disabled">Emplacement</option>
                                     {% for city in city_search%}
                                     <option value="{{ city}}">{{ city}}</option>
                                     {% endfor%}
@@ -48,7 +48,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="year">
-                                    <option disabled="disabled" selected="selected">Select Year</option>
+                                    <option disabled="disabled" selected="selected">Sélectionnez l'année</option>
                                     {% for year in year_search%}
                                     <option value="{{ year}}">{{ year}}</option>
                                     {% endfor%}
@@ -60,7 +60,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="body_style">
-                                    <option disabled="disabled" selected="selected">Select Type Of Car</option>
+                                    <option disabled="disabled" selected="selected">Sélectionnez le type de voiture</option>
                                     {% for body_style in body_style_search%}
                                     <option value="{{ body_style}}">{{ body_style}}</option>
                                     {% endfor%}
@@ -88,7 +88,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <button class="btn btn-block button-theme btn-md">
-                                    <i class="fa fa-search"></i>Find
+                                    <i class="fa fa-search"></i>Trouver
                                 </button>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Here's your <span>Cars</span></h1>
+            <h1>Voici votre <span>Voitures</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
@@ -115,7 +115,7 @@
                 <div class="car-box">
                     <div class="car-thumbnail">
                         <a href="{% url 'car_detail' car.id %}" class="car-img">
-                            <div class="tag">For Sale</div>
+                            <div class="tag">À vendre</div>
                             <img class="d-block w-100" src="{{ car.car_photo.url }}" alt="car" style="min-height: 262px; max-height: 262px">
                             <div class="facilities-list clearfix">
                                 <ul>

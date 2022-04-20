@@ -1,7 +1,11 @@
 from pickle import TRUE
-from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.shortcuts import redirect, render
 from cars.models import Car
 from pages.models import Team
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 def home(request):
@@ -31,6 +35,31 @@ def about(request):
     return render(request, 'pages/about.html', data)
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        
+        # Subject = subject
+        # message = message
+        email_from = settings.EMAIL_HOST_USER
+        # recipient_list = [admin_email]
+        admin_info = User.objects.get(is_superuser=True)
+        admin_email = admin_info.email
+        email_subject = 'vous avez un nouveau message du site car dealer ' + subject
+        message_body = 'Name:' + name + '. Email:' + email + '. Phone:' + phone + '. Message:' + message 
+        send_mail(
+            email_subject,
+            message_body,
+            email_from,
+            [admin_email],
+            fail_silently=False,
+        )
+        messages.success(request, 'merci pour votre contact, votre requêtte a été prise en charge!')
+        
+        return redirect('contact')
     return render(request, 'pages/contact.html')
 
 def services(request):

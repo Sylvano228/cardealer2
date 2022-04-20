@@ -8,10 +8,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Our Car Inventory</h1>
+            <h1>Notre inventaire de voitures</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="active">Cars</li>
+                <li><a href="{% url 'home' %}">Accueil</a></li>
+                <li class="active">Voitures</li>
             </ul>
         </div>
     </div>
@@ -30,7 +30,7 @@
                         <div class="car-box-3">
                             <div class="car-thumbnail">
                                 <a href="{% url 'car_detail' car.id %}" class="car-img">
-                                    <div class="tag">For Rent</div>
+                                    <div class="tag">A louer</div>
                                     <div class="price-box">
                                         <span>{{ car.price | intcomma}} FCFA</span>
                                     </div>
@@ -134,14 +134,14 @@
                 <div class="sidebar-right">
                     <!-- Advanced search start -->
                     <div class="widget advanced-search2">
-                        <h3 class="sidebar-title">Search your desire car</h3>
+                        <h3 class="sidebar-title">Recherchez votre voiture de désir</h3>
                         <form action="{% url 'search'%}" method="">
                             <div class="form-group">
                                 <input type="text" name="model" placeholder="Search by name" class="form-control">
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="model">
-                                    <option selected="true" disabled="disabled">Model</option>
+                                    <option selected="true" disabled="disabled">Modèle</option>
                                     {% for model in model_search%}
                                     <option value="{{ model}}">{{ model}}</option>
                                     {% endfor%}
@@ -149,7 +149,7 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="city">
-                                    <option selected="true" disabled="disabled">Location</option>
+                                    <option selected="true" disabled="disabled">Emplacement</option>
                                     {% for city in city_search%}
                                     <option value="{{ city}}">{{ city}}</option>
                                     {% endfor%}
@@ -157,7 +157,7 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="year">
-                                    <option selected="true" disabled="disabled">Year</option>
+                                    <option selected="true" disabled="disabled">Année</option>
                                     {% for year in year_search%}
                                     <option value="{{ year}}">{{ year}}</option>
                                     {% endfor%}
@@ -165,20 +165,20 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="body_style">
-                                    <option selected="true" disabled="disabled">Select Type Of Car</option>
+                                    <option selected="true" disabled="disabled">Sélectionnez le type de voiture</option>
                                     {% for body_style in body_style_search%}
                                     <option value="{{ body_style}}">{{ body_style}}</option>
                                     {% endfor%}
                                 </select>
                             </div>
                             <div class="range-slider clearfix">
-                                <label>Price</label>
+                                <label>Prix</label>
                                 <div data-min="0" data-max="950000000" data-min-name="min_price" data-max-name="max_price" data-unit="CFA" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-block button-theme btn-md">
-                                    <i class="fa fa-search"></i> Search
+                                    <i class="fa fa-search"></i> Recherche
                                 </button>
                             </div>
                         </form>
@@ -186,7 +186,7 @@
                    
                     <!-- Question start -->
                     <div class="widget question widget-3">
-                        <h5 class="sidebar-title">Follow us</h5>
+                        <h5 class="sidebar-title">Suivez nous</h5>
                         <div class="social-list clearfix">
                             <ul>
                                 <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>

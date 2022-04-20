@@ -10,25 +10,25 @@
                 <img class="d-block w-100 h-100" src="{% static 'img/car-1.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
                     {% include 'includes/messages.html'%}
-                    <h3>Wow Factor Standard</h3>
-                    <h5>Allow us to guide you through the innovative stress<br> free approach in finding your dream car.</h5>
-                    <a href="{% url 'services'%}" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>Norme du facteur wow</h3>
+                    <h5>Laissez-nous vous guider à travers l'approche innovante<br> sans stress pour trouver la voiture de vos rêves.</h5>
+                    <a href="{% url 'services'%}" class="btn btn-lg btn-theme">Lire la suite</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/car-2.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>Explore Your Dream Car</h3>
-                    <h5>Allow us to guide you through the innovative stress<br> free approach in finding your dream car.</h5>
-                    <a href="{% url 'services'%}" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>Explorez la voiture de vos rêves</h3>
+                    <h5>Laissez-nous vous guider à travers l'approche innovante<br> sans stress pour trouver la voiture de vos rêves.</h5>
+                    <a href="{% url 'services'%}" class="btn btn-lg btn-theme">Lire la suite</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/car-3.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>We Are Wheel</h3>
-                    <h5>Allow us to guide you through the innovative stress<br> free approach in finding your dream car.</h5>
-                    <a href="{% url 'services'%}" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>Nous sommes la roue</h3>
+                    <h5>Laissez-nous vous guider à travers l'approche innovante<br> sans stress pour trouver la voiture de vos rêves.</h5>
+                    <a href="{% url 'services'%}" class="btn btn-lg btn-theme">Lire la suite</a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="model">
-                        <option selected="true" disabled="disabled">Model</option>
+                        <option selected="true" disabled="disabled">Modèle</option>
                         {% for model in model_search%}
                         <option value="{{ model}}">{{ model}}</option>
                         {% endfor%}
@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="city">
-                        <option selected="true" disabled="disabled">Location</option>
+                        <option selected="true" disabled="disabled">Emplacement</option>
                         {% for city in city_search%}
                         <option value="{{ city}}">{{ city}}</option>
                         {% endfor%}
@@ -56,7 +56,7 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="year">
-                        <option selected="true" disabled="disabled">Year</option>
+                        <option selected="true" disabled="disabled">Année</option>
                         {% for year in year_search%}
                         <option value="{{ year}}">{{ year}}</option>
                         {% endfor%}
@@ -64,20 +64,20 @@
                 </div>
                 <div class="form-group">
                     <select class="form-control search-fields" name="body_style">
-                        <option selected="true" disabled="disabled">Select Type Of Car</option>
+                        <option selected="true" disabled="disabled">Sélectionnez le type de voiture</option>
                         {% for body_style in body_style_search%}
                         <option value="{{ body_style}}">{{ body_style}}</option>
                         {% endfor%}
                     </select>
                 </div>
                 <div class="range-slider clearfix">
-                    <label>Price</label>
+                    <label>Prix</label>
                     <div data-min="0" data-max="950000000" data-min-name="min_price" data-max-name="max_price" data-unit="CFA" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-block button-theme btn-md">
-                        <i class="fa fa-search"></i> Search
+                        <i class="fa fa-search"></i> Recherche
                     </button>
                 </div>
             </form>
@@ -104,7 +104,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Featured <span>Cars</span></h1>
+            <h1>Voitures <span>en vedette</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <!-- Slick slider area start -->
@@ -115,7 +115,7 @@
                     <div class="car-box-3">
                         <div class="car-thumbnail">
                             <a href="car-details.html" class="car-img">
-                                <div class="tag-2">Featured</div>
+                                <div class="tag-2">Mis en exergue</div>
                                 <div class="price-box">
                                     {% comment %} <span class="del"><del>FCFA {{ car.price }}</del></span>
                                     <br> {% endcomment %}
@@ -185,7 +185,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Latest <span>Cars</span></h1>
+            <h1>Dernières <span>voitures</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
@@ -277,7 +277,7 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Executive <span>Team</span></h1>
+            <h1>Équipe <span>de direction</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
         </div>
         <!-- Slick slider area start -->
@@ -297,7 +297,7 @@
                             </div>
                         </div>
                         <div class="details">
-                            <h4><a href="team-detail.html">{{ team.first_name }} {{ team.last_name }}</a></h4>
+                            <h4><a>{{ team.first_name }} {{ team.last_name }}</a></h4>
                             <h5>{{ team.designation }}</h5>
                         </div>
                     </div>
@@ -339,8 +339,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-title" id="carOverviewModalLabel">
-                        <h4>Explore Your Dream Car</h4>
-                        <h5><i class="flaticon-pin"></i> 123 Kathal St. Tampa City,</h5>
+                        <h4>Explorez la voiture de vos rêves</h4>
+                        <h5><i class="flaticon-pin"></i> Lomé Togo</h5>
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -354,7 +354,7 @@
                                 <img src="{% static 'img/car-14.jpg' %}" alt="best-car" class="img-fluid modalLabel-2">
                                 <div class="sobuz">
                                     <div class="price-box" style="padding-bottom: 5px;">
-                                        <span class="del-2">$1050.00</span>
+                                        <span class="del-2">1050000 FCFA</span>
                                     </div>
                                     <div class="">
                                         <a href="car-details.html" class="btn btn-md btn-round btn-theme">Convertible</a>
@@ -365,37 +365,37 @@
                         <div class="col-lg-6 modal-right">
                             <div class="modal-right-content">
                                 <section>
-                                    <h3>Features</h3>
+                                    <h3>Caractéristiques</h3>
                                     <div class="features">
                                         <ul class="bullets">
-                                            <li>Cruise Control</li>
-                                            <li>Airbags</li>
-                                            <li>Air Conditioning</li>
-                                            <li>Alarm System</li>
-                                            <li>Audio Interface</li>
-                                            <li>CDR Audio</li>
-                                            <li>Seat Heating</li>
-                                            <li>ParkAssist</li>
+                                            <li>Régulateur de vitesse</li>
+                                            <li>Coussins gonflables</li>
+                                            <li>Climatisation</li>
+                                            <li>Système d'alarme</li>
+                                            <li>Interface audio</li>
+                                            <li>CDR audio</li>
+                                            <li>Siège chauffant</li>
+                                            <li>Aide au stationnement</li>
                                         </ul>
                                     </div>
                                 </section>
                                 <section>
                                     <h3>Overview</h3>
                                     <ul class="bullets">
-                                        <li>Model</li>
-                                        <li>Year</li>
+                                        <li>Modèle</li>
+                                        <li>Année</li>
                                         <li>Condition</li>
-                                        <li>Price</li>
+                                        <li>Prix</li>
                                         <li>Audi</li>
                                         <li>2020</li>
-                                        <li>Brand New</li>
-                                        <li>$178,000</li>
+                                        <li>Tout neuf</li>
+                                        <li>1780000 FCFA</li>
                                     </ul>
                                 </section>
                                 <div class="description">
                                     <h3>Description</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-                                    <a href="car-details.html" class="btn btn-md btn-round btn-theme">Show Detail</a>
+                                    <a href="car-details.html" class="btn btn-md btn-round btn-theme">Voir les détails</a>
                                 </div>
                             </div>
                         </div>
